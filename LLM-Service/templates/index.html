@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LLM App</title>
+    <link rel="stylesheet" href="https://cdn.discordapp.com/attachments/695222842090717570/836728394201579796/discord-style.css">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='res/favicon.png') }}">
+    <style>
+        body {
+            background-color: #36393F;
+            color: #DCDDDE;
+            font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            font-size: 25px;
+            font-weight: 600;
+            margin-top: 32px;
+        }
+
+        .header-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30vh;
+            min-height: 15vh;
+        }
+
+        .header-image img {
+            max-width: 20%;
+            max-height: 20%;
+            margin: 10%
+        }
+        input[type="submit"]:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 32px;
+        }
+
+        textarea {
+            background-color: #40444B;
+            border-radius: 10px;
+            border: none;
+            color: #DCDDDE;
+            font-size: 16px;
+            height: 20vh;
+            margin-top: 16px;
+            padding: 8px;
+            width: 100vh;
+        }
+
+        input[type="submit"] {
+            background-color: #2675e2;
+            color: #FFFFFF;
+            cursor: pointer;
+
+            border-radius: 8px;
+            border: none;
+
+            float: right;
+            font-size: 16px;
+            height: 40px;
+            margin-top: 16px;
+            padding: 8px;
+            width: 15%;
+            
+        }
+
+        label {
+            font-size: 25px;
+            font-weight: 600;
+            margin-top: 32px;
+            text-align: left;
+            width: 100%;
+        }
+
+        footer {
+            background-color: #262626;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        .response {
+            width: 100vh;
+            margin-bottom: 10%;
+        }
+
+        .submit-button {
+            width: 100%
+        }
+
+    </style>
+</head>
+<body>
+        <div class="header-image">
+            <img src="static/res/favicon.png" alt="Header image">
+        </div>
+        </a>
+
+        <form method="post" enctype="multipart/form-data">
+
+            <label for="prompt">Enter a prompt:</label>
+            <textarea type="text" name="prompt" placeholder="Enter your prompt...">{{prompt}}</textarea>
+            <div class="submit-button">
+                <input type="submit" value="Submit">
+            </div>
+
+
+            <div class="response">
+                {% if response %}
+                <h2>Response:</h2>
+                <p>{{ response }}</p>
+                {% else %}
+                <h2>Response:</h2>
+                <p>No response found.</p>
+                {% endif %}
+            </div>
+
+
+        </form>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>Big Data Research Group</h4>
+                        <h4>Phillipps-Universität Marburg</h4>
+                    </div>
+
+                <div class="col-md-4 text-center">
+                    
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
