@@ -7,20 +7,20 @@ All additional packages/libraries, including Flask and Transformers can be downl
 ``
 pip install -r requirements.txt
 ``
+# Service Setup Information
+The service is using port 7777 on the GPU Server, at IP Address 192.168.178.22
+( get details from Alex ! )
+
+To run the service manually, navigate into the /app/home/fatimakhalid/LLMQ-As directory and run
+``
+python app.py
+``
+
 # Usage
 The service can be accessed at the following URL in your web browser:
 https://furthr.informatik.uni-marburg.de/llm
 
 To use the web app, enter a text prompt in the form and click the "Submit" button to see the model's response. Prompts can be edited, replaced, and resubmitted.
-
-# Service Setup Information
-The service is using port 7777 on the GPU Server, at IP Address 192.168.178.22
-( get details from Alex ! )
-
-To run the service manually, navigate into the LLMQ-As directory and run
-``
-python app.py
-``
 
 # Model Information
 The BLOOMZ model is a multilingual version of the BLOOM text generation model which has been fine-tuned to perform tasks and respond to specific prompts. View more about the model's specific capabilites on the Hugging Face website:
