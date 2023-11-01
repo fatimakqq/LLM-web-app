@@ -9,7 +9,7 @@ To use the web app, enter a text prompt in the form and click the "Submit" butto
 
 # Requirements
 To run this web app, you will need to have Python 3.6 or higher installed on your system.
-All additional packages/libraries, including Flask and Transformers can be downloaded by running the following command:
+All additional packages/libraries, including Flask, Transformers, and Accelerate can be downloaded by running the following command:
 ``
 pip install -r requirements.txt
 ``
